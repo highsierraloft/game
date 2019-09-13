@@ -1,8 +1,9 @@
 $(document).ready(function () {
-  let mainClick = $('#click');
-  mainClick.click(counter());
-
-  function counter() {
-    
-  }
+  let mainClick = $('.click');
+  let count = 0;
+  let mod = 1;
+  mainClick.click(function() {
+    count += 1 * mod;
+    mainClick.text(count);
+  });
 });
