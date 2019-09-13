@@ -9,11 +9,22 @@
         .stats {
             min-width: 65%;
             background: rgb(184, 78, 78);
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            padding: 15px;
+            border: 1px solid black;
+
+            h3 {
+                margin: 10px 0;
+            }
         }
 
         .achievements {
             min-width: 35%;
             background: rgb(117, 17, 17);
+            border: 1px solid black;
         }
     }
 
@@ -24,11 +35,47 @@
         .click {
             min-width: 65%;
             background: #503131;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+
+            #clicked {
+                width: 200px;
+                height: 200px;
+                background: #a89393;
+                border-radius: 50%;
+            }
         }
 
         .buy {
             min-width: 35%;
             background: #b17f7f;
+            overflow: auto;
+            border: 1px solid black;
+
+            .buy-choose {
+                display: flex;
+
+                div {
+                    width: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100px;
+                    background: rgb(150, 99, 99);
+                    border: 1px solid black;
+                }
+            }
+
+            div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100px;
+                background: rgb(150, 99, 99);
+                border: 1px solid black;
+            }
         }
     }
 }
