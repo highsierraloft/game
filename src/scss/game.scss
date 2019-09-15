@@ -1,3 +1,14 @@
+@keyframes farmElement {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
 .game {
     height: calc(100vh - 150px);
     width: 100%;
@@ -40,11 +51,16 @@
             align-items: center;
             border: 1px solid black;
 
-            #clicked {
+            .clicked {
                 width: 200px;
                 height: 200px;
                 background: #a89393;
                 border-radius: 50%;
+                position: relative;
+
+                span {
+                    position: absolute;
+                }
             }
         }
 
