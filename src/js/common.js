@@ -20,12 +20,15 @@ $(document).ready(function () {
   let randX;
   let randY;
 
+  const saveAudio = new Audio('../src/audio/saveClick.mp3');
+  const clickAudio = new Audio('../src/audio/onClickEffect.mp3');
+
   let buyList = [{
     name: 'Гастарбайтер',
     price: 15,
     bricksPerSec: 0.1
   }, {
-    name:'Бригадир',
+    name: 'Бригадир',
     price: 100,
     bricksPerSec: 1
   }, {
@@ -50,8 +53,7 @@ $(document).ready(function () {
   function onStart() {
     if (localStorage.getItem("currentMoney") === null) {
       moneyTotal = 0;
-    }
-    else {
+    } else {
       moneyTotal = Number(localStorage.getItem("currentMoney"));
     }
     moneyElement = $("<h3></h3>").text('Money: ' + moneyTotal).appendTo(".stats");
@@ -59,8 +61,12 @@ $(document).ready(function () {
     farmElement = $("<div></div>").addClass("clicked").appendTo(".click");
   }
 
+
+
   function clickEffect() {
-    new Audio('../src/audio/onClickEffect.mp3').play();
+    clickAudio.pause();
+    clickAudio.currentTime = 0;
+    clickAudio.play();
     randX = Math.floor(Math.random() * (300 - (-100) + 1)) - 100;
     randY = Math.floor(Math.random() * (200 - (-100) + 1)) - 100;
     randSize = Math.floor(Math.random() * (36 - (-20) + 1)) - 20;
@@ -73,7 +79,9 @@ $(document).ready(function () {
   }
 
   function saveLocal() {
-    new Audio('../src/audio/saveClick.mp3').play();
+    saveAudio.pause();
+    saveAudio.currentTime = 0;
+    saveAudio.play();
     localStorage.setItem("currentMoney", moneyTotal);
   }
 });
