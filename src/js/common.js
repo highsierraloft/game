@@ -34,8 +34,6 @@ $(document).ready(function () {
   // ------------- Функции -------------
 
   function onStart() {
-    
-    console.log(localStorage.getItem("currentMoney"));
     if (localStorage.getItem("currentMoney") === null) {
       moneyTotal = 0;
     }
