@@ -90,8 +90,7 @@ $(document).ready(function () {
     randHEXColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
 
     rotatingIngot.animate({
-      top: "+=100",
-      opacity: "1",
+     boxShadow : "3px 3px 5px 6px #ccc",
     }, 1500);
     
     $("<span></span>").css("top", randY).css("left", randX).css("font-size", randSize).css("color", randHEXColor).text("+" + clickFarm).appendTo(".clicked").animate({
