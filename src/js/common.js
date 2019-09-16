@@ -26,15 +26,28 @@ $(document).ready(function () {
   let buyList = [{
     name: 'Гастарбайтер',
     price: 15,
-    bricksPerSec: 0.1
+    bricksPerSec: 0.1,
+    quantity: 0
   }, {
     name: 'Бригадир',
     price: 100,
-    bricksPerSec: 1
+    bricksPerSec: 1,
+    quantity: 0
   }, {
     name: 'Каменная шахта',
     price: 1100,
-    bricksPerSec: 8
+    bricksPerSec: 8,
+    quantity: 0
+  }, {
+    name: 'Ферма',
+    price: 12000,
+    bricksPerSec: 47,
+    quantity: 0
+  }, {
+    name: 'Завод',
+    price: 130000,
+    bricksPerSec: 265, 
+    quantity: 0
   }];
 
   // ------------- События -------------
