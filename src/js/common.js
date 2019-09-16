@@ -60,7 +60,7 @@ $(document).ready(function () {
   }
 
   function clickEffect() {
-    new Audio('./dist/src/audio/onClickEffect.mp3').play();
+    new Audio('../src/audio/onClickEffect.mp3').play();
     randX = Math.floor(Math.random() * (300 - (-100) + 1)) - 100;
     randY = Math.floor(Math.random() * (200 - (-100) + 1)) - 100;
     randSize = Math.floor(Math.random() * (36 - (-20) + 1)) - 20;
@@ -73,7 +73,7 @@ $(document).ready(function () {
   }
 
   function saveLocal() {
-    new Audio('./dist/src/audio/saveClick.mp3').play();
+    new Audio('../src/audio/saveClick.mp3').play();
     localStorage.setItem("currentMoney", moneyTotal);
   }
 });
