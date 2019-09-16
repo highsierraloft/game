@@ -20,6 +20,20 @@ $(document).ready(function () {
   let randX;
   let randY;
 
+  let buyList = [{
+    name: 'Гастарбайтер',
+    price: 15,
+    bricksPerSec: 0.1
+  }, {
+    name:'Бригадир',
+    price: 100,
+    bricksPerSec: 1
+  }, {
+    name: 'Каменная шахта',
+    price: 1100,
+    bricksPerSec: 8
+  }];
+
   // ------------- События -------------
   onStart();
 
