@@ -35,6 +35,16 @@ $(document).ready(function () {
     price: 1100,
     bricksPerSec: 8,
     quantity: 0
+  }, {
+    name: 'Ферма',
+    price: 12000,
+    bricksPerSec: 47,
+    quantity: 0
+  }, {
+    name: 'Завод',
+    price: 130000,
+    bricksPerSec: 265, 
+    quantity: 0
   }];
 
   // ------------- События -------------
