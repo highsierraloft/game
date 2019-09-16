@@ -9,6 +9,7 @@
 }
 
 
+
 .game {
     height: calc(100vh - 150px);
     width: 100%;
@@ -26,6 +27,15 @@
             flex-direction: column;
             padding: 15px;
             border: 1px solid black;
+            position: relative;
+
+            .stats-save {
+                position: absolute;
+                right: 30px;
+                top: 30px;
+                padding: 10px 15px;
+                background: #a89393;
+            }
 
             h3 {
                 margin: 10px 0;
@@ -60,6 +70,7 @@
 
                 span {
                     position: absolute;
+                    user-select: none;
                 }
             }
         }
