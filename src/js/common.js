@@ -19,6 +19,7 @@ $(document).ready(function () {
 
   let randX;
   let randY;
+  let randHEXColor;
 
   const saveAudio = new Audio('../src/audio/saveClick.mp3');
   const clickAudio = new Audio('../src/audio/onClickEffect.mp3');
@@ -80,10 +81,12 @@ $(document).ready(function () {
     clickAudio.pause();
     clickAudio.currentTime = 0;
     clickAudio.play();
-    randX = Math.floor(Math.random() * (250 - (-50) + 1)) - 100;
-    randY = Math.floor(Math.random() * (200 - (-100) + 1)) - 100;
-    randSize = Math.floor(Math.random() * (36 - (-20) + 1)) - 20;
-    $("<span></span>").css("top", randY).css("left", randX).css("font-size", randSize).text("+" + clickFarm).appendTo(".clicked").animate({
+    randX = Math.floor(Math.random() * (300 - (-100) + 1)) - 100;
+    randY = Math.floor(Math.random() * (100 - (-100) + 1)) - 100;
+    randSize = Math.floor(Math.random() * (48 - (20) + 1)) + 20;
+    randHEXColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+
+    $("<span></span>").css("top", randY).css("left", randX).css("font-size", randSize).css("color", randHEXColor).text("+" + clickFarm).appendTo(".clicked").animate({
       top: "+=100",
       opacity: "0",
     }, 1500).fadeOut(1, function () {
