@@ -29,7 +29,7 @@ $(document).ready(function () {
     clickEffect();
   });
 
-  $(".stats-save").click(saveLocal());
+  $(".stats-save").click(saveLocal);
 
   // ------------- Функции -------------
 
@@ -40,7 +40,7 @@ $(document).ready(function () {
       moneyTotal = 0;
     }
     else {
-      moneyTotal = localStorage.getItem("currentMoney");
+      moneyTotal = Number(localStorage.getItem("currentMoney"));
     }
     moneyElement = $("<h3></h3>").text('Money: ' + moneyTotal).appendTo(".stats");
     modElement = $("<h3></h3>").text('Mod: ' + mod).appendTo(".stats");
