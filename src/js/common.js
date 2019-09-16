@@ -23,15 +23,18 @@ $(document).ready(function () {
   let buyList = [{
     name: 'Гастарбайтер',
     price: 15,
-    bricksPerSec: 0.1
+    bricksPerSec: 0.1,
+    quantity: 0
   }, {
-    name:'Бригадир',
+    name: 'Бригадир',
     price: 100,
-    bricksPerSec: 1
+    bricksPerSec: 1,
+    quantity: 0
   }, {
     name: 'Каменная шахта',
     price: 1100,
-    bricksPerSec: 8
+    bricksPerSec: 8,
+    quantity: 0
   }];
 
   // ------------- События -------------
@@ -50,8 +53,7 @@ $(document).ready(function () {
   function onStart() {
     if (localStorage.getItem("currentMoney") === null) {
       moneyTotal = 0;
-    }
-    else {
+    } else {
       moneyTotal = Number(localStorage.getItem("currentMoney"));
     }
     moneyElement = $("<h3></h3>").text('Money: ' + moneyTotal).appendTo(".stats");
