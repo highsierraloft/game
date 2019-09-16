@@ -55,7 +55,7 @@ $(document).ready(function () {
 
   farmElement.click(function () {
     moneyTotal += clickFarm * mod;
-    moneyElement.text("Money: " + moneyTotal);
+    moneyElement.text("Слитки: " + moneyTotal);
     clickEffect();
   });
 
@@ -69,8 +69,8 @@ $(document).ready(function () {
     } else {
       moneyTotal = Number(localStorage.getItem("currentMoney"));
     }
-    moneyElement = $("<h3></h3>").text('Money: ' + moneyTotal).appendTo(".stats");
-    modElement = $("<h3></h3>").text('Mod: ' + mod).appendTo(".stats");
+    moneyElement = $("<h3></h3>").text('Слитки: ' + moneyTotal).appendTo(".stats");
+    modElement = $("<h3></h3>").text('Модификации: ' + mod).appendTo(".stats");
     farmElement = $("<div></div>").addClass("clicked").appendTo(".click");
   }
 
@@ -80,7 +80,7 @@ $(document).ready(function () {
     clickAudio.pause();
     clickAudio.currentTime = 0;
     clickAudio.play();
-    randX = Math.floor(Math.random() * (300 - (-100) + 1)) - 100;
+    randX = Math.floor(Math.random() * (250 - (-50) + 1)) - 100;
     randY = Math.floor(Math.random() * (200 - (-100) + 1)) - 100;
     randSize = Math.floor(Math.random() * (36 - (-20) + 1)) - 20;
     $("<span></span>").css("top", randY).css("left", randX).css("font-size", randSize).text("+" + clickFarm).appendTo(".clicked").animate({

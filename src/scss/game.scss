@@ -8,6 +8,22 @@
     }
 }
 
+@keyframes clickIngot {
+    0% {
+        transform: rotate(-8deg);
+    }
+
+    50% {
+        transform: rotate(8deg);
+    }
+
+    100% {
+        transform: rotate(-8deg)
+    }
+
+    
+}
+
 
 
 .game {
@@ -56,7 +72,7 @@
 
         .click {
             min-width: 65%;
-            background: #503131;
+            background: url("../img/click-bg.jpg") center/cover #503131;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -65,10 +81,10 @@
             .clicked {
                 width: 200px;
                 height: 200px;
-                background: #a89393;
-                border-radius: 50%;
+                background: url("../img/goldIngotClick.png") center/cover;
                 position: relative;
                 cursor: pointer;
+                animation: clickIngot 2s infinite;
 
                 span {
                     position: absolute;
