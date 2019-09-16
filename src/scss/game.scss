@@ -81,10 +81,15 @@
             .clicked {
                 width: 200px;
                 height: 200px;
-                background: url("../img/goldIngotClick.png") center/cover;
                 position: relative;
                 cursor: pointer;
-                animation: clickIngot 2s infinite;
+
+                .rotatingIngotElement {
+                    width: 200px;
+                    height: 200px;
+                    background: url("../img/goldIngotClick.png") center/cover;
+                    animation: clickIngot 2s infinite;
+                }
 
                 span {
                     position: absolute;
@@ -103,7 +108,7 @@
                 display: flex;
 
                 div {
-                    width: 50%;
+                    width: 100%;
                     display: flex;
                     justify-content: center;
                     align-items: center;

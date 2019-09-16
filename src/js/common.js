@@ -8,6 +8,8 @@ $(document).ready(function () {
   // Элемент выводящий модификатор
   let modElement;
 
+  let rotatingIngot;
+
   // ------------- Глобальные переменные -------------
 
   // Общее кол-во денег
@@ -47,7 +49,7 @@ $(document).ready(function () {
   }, {
     name: 'Завод',
     price: 130000,
-    bricksPerSec: 265, 
+    bricksPerSec: 265,
     quantity: 0
   }];
 
@@ -73,6 +75,7 @@ $(document).ready(function () {
     moneyElement = $("<h3></h3>").text('Слитки: ' + moneyTotal).appendTo(".stats");
     modElement = $("<h3></h3>").text('Модификации: ' + mod).appendTo(".stats");
     farmElement = $("<div></div>").addClass("clicked").appendTo(".click");
+    rotatingIngot = $("<span></span>").addClass("rotatingIngotElement").appendTo(".clicked");
   }
 
 
@@ -84,8 +87,13 @@ $(document).ready(function () {
     randX = Math.floor(Math.random() * (300 - (-100) + 1)) - 100;
     randY = Math.floor(Math.random() * (100 - (-100) + 1)) - 100;
     randSize = Math.floor(Math.random() * (48 - (20) + 1)) + 20;
-    randHEXColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+    randHEXColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
 
+    rotatingIngot.animate({
+      top: "+=100",
+      opacity: "1",
+    }, 1500);
+    
     $("<span></span>").css("top", randY).css("left", randX).css("font-size", randSize).css("color", randHEXColor).text("+" + clickFarm).appendTo(".clicked").animate({
       top: "+=100",
       opacity: "0",
